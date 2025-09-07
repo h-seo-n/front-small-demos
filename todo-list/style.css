@@ -1,59 +1,107 @@
-
-
-
-h1 {
-    text-align: center;
+* { box-sizing: border-box; }
+:root{
+  --bg:#f7f7fb; --surface:#fff; --text:#1f2937; --muted:#6b7280;
+  --primary:#5fe263; --danger:#ef90d9; --radius:14px;
+  --shadow:0 8px 24px rgba(0,0,0,.08);
 }
 
-div {
-    justify-content: center;
-    text-align: center;
-    margin: 5px 0 5px;
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0b0e14; --surface:#111827; --text:#e5e7eb; --muted:#9ca3af;
+    --primary:#60a5fa; --danger:#f87171; --shadow:0 10px 30px rgba(0,0,0,.5);
+  }
 }
 
-li {
-    display: inline-block;
-    margin: 0 0 10px;
+html, body { height: 100%; }
+body{
+  margin:0; background:var(--bg); color:var(--text);
+  font:16px/1.5 -apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR",Segoe UI,Roboto,Arial;
+  display:flex; justify-content:center; align-items:flex-start; padding:48px 16px;
 }
 
-input {
-    margin: 0 5px;
+/* App card */
+main.app{
+  width:min(720px,92vw);
+  background:var(--surface);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  padding:28px 24px 22px;
 }
 
-span {
-    margin: 0 5px;
+/* Title & helper */
+#title{
+  margin:0 0 6px; text-align:center;
+  font-size:clamp(22px,3.5vw,34px);
+}
+.subtitle{ text-align:center; color:var(--muted); margin:0 0 20px; }
+
+/* Input row */
+.input-row{
+  display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin-bottom:12px;
+}
+#todo-input{
+  width:min(420px,90vw); padding:10px 12px;
+  border:1px solid #d1d5db; border-radius:10px; background:transparent;
+}
+#todo-input:focus-visible{ outline:2px solid color-mix(in oklab,var(--primary),white 60%); outline-offset:2px; }
+
+#submit{
+  padding:10px 14px; border:0; border-radius:10px; background:var(--primary);
+  color:#fff; font-weight:600; cursor:pointer;
+  transition:filter .2s ease, transform .05s ease;
+}
+#submit:hover{ filter:brightness(1.05); }
+#submit:active{ transform:translateY(1px); }
+
+/* Stats */
+.stats{
+  display:flex; gap:16px; justify-content:center; margin:8px 0 12px; color:var(--muted);
 }
 
-.checked {
-    text-decoration: line-through;
-    color: gray;
+/* Todo list */
+#todo-list{
+  list-style:none; padding:0; margin:0;
+  display:grid; gap:10px;
+}
+#todo-list:empty::before{
+  content:"할 일이 비어 있어요. 첫 할 일을 추가해 보세요!";
+  display:block; text-align:center; color:var(--muted); padding:20px 0;
 }
 
-.confetti {
-    /* confetti are positioned independently of their parents */
-    position: absolute;
+#todo-list li{
+  display:grid; grid-template-columns:28px 1fr auto; align-items:center; gap:10px;
+  padding:12px 14px; border:1px solid #e5e7eb; border-radius:12px;
+  background: color-mix(in oklab,var(--surface),white 6%);
+  transition: box-shadow .2s ease, transform .05s ease;
+}
+#todo-list li:hover{ box-shadow:0 6px 18px rgba(0,0,0,.06); }
+#todo-list li:active{ transform:translateY(1px); }
 
-    /* positioned at the top of parents */
-    top: 0;
+#todo-list input[type="checkbox"]{ width:18px; height:18px; accent-color:var(--primary); cursor:pointer; }
+#todo-list li span{ text-align:left; word-break:break-word; }
 
-    /* for a bigger size */
-    font-size: 1.6rem;
+#todo-list li button{
+  margin-left:8px; border:0; padding:8px 10px; border-radius:10px;
+  background:var(--danger); color:#fff; cursor:pointer; opacity:.9;
+  transition:opacity .2s ease, transform .05s ease;
+}
+#todo-list li button:hover{ opacity:1; }
+#todo-list li button:active{ transform:translateY(1px); }
 
-    /* animation for the confetti fall 
-                linear : means the timing is linear -> the confetti will move at a constant speed
-                5s : duration of the animation
-                infinite : animation repeats indefinitely
-            */
-
-    animation: confetti-fall linear 5s infinite;
+/* Completed state (works with your existing .checked class) */
+.checked, #todo-list li.completed span{
+  text-decoration:line-through; color:var(--muted);
 }
 
-@keyframes confetti-fall {
-    0% {
-        transform: translateY(-100%) rotate(0);
-    }
+/* Confetti stays fixed and non-interactive */
+.confetti{ position:fixed; top:-2rem; font-size:1.6rem; animation:confetti-fall linear 5s infinite; pointer-events:none; }
+@keyframes confetti-fall{
+  0%{ transform:translateY(-100%) rotate(0) }
+  100%{ transform:translateY(100vh) rotate(180deg) }
+}
 
-    100% {
-        transform: translateY(100vh) rotate(180deg);
-    }
+/* Small screens */
+@media (max-width: 400px){
+  #todo-input{ width:100%; }
+  #todo-list li{ grid-template-columns:24px 1fr auto; }
 }

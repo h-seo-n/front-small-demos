@@ -10,28 +10,22 @@
     <link rel="icon" href="favicon.ico">
 </head>
 <body>
+  <main class="app">
     <h1 id="title">📋 오늘의 할 일</h1>
-    <div>
-        <input id="todo-input" name="todo-input" placeholder="할 일을 입력하세요">
-        <button id="submit">추가</button>
+    <p class="subtitle">작은 목표부터 하나씩</p>
+
+    <div class="input-row">
+      <input id="todo-input" name="todo-input" placeholder="할 일을 입력하세요">
+      <button id="submit">추가</button>
     </div>
-    <br>
-    <div>
-        <div>전체 todo: <span id="todo-span">0</span></div>
-        <div>완료한 일: <span id="complete-span">0</span></div>
+
+    <div class="stats">
+      <div>전체 todo: <span id="todo-span">0</span></div>
+      <div>완료한 일: <span id="complete-span">0</span></div>
     </div>
-    <div>
-        <ul id="todo-list">
-            <!--
-            <li>
-                <input type="checkbox">
-                <span>세미나 자료 만들기</span>
-                <button>삭제하기</button>
-                <br>
-            </li>
-            -->
-        </ul>
-    </div>
-    <script src="index.js"></script>
+
+    <ul id="todo-list"></ul>
+  </main>
+  <script src="index.js"></script>
 </body>
 </html>
