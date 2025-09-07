@@ -1,4 +1,4 @@
-# Small demos I built in the process of studying
+## Small demos built in the process of studying
 I put a lot of efforts in each demos so I thought it wouldn't hurt to post some in my github :)
 
 ## Todo-list
