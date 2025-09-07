@@ -1,0 +1,59 @@
+
+
+
+h1 {
+    text-align: center;
+}
+
+div {
+    justify-content: center;
+    text-align: center;
+    margin: 5px 0 5px;
+}
+
+li {
+    display: inline-block;
+    margin: 0 0 10px;
+}
+
+input {
+    margin: 0 5px;
+}
+
+span {
+    margin: 0 5px;
+}
+
+.checked {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.confetti {
+    /* confetti are positioned independently of their parents */
+    position: absolute;
+
+    /* positioned at the top of parents */
+    top: 0;
+
+    /* for a bigger size */
+    font-size: 1.6rem;
+
+    /* animation for the confetti fall 
+                linear : means the timing is linear -> the confetti will move at a constant speed
+                5s : duration of the animation
+                infinite : animation repeats indefinitely
+            */
+
+    animation: confetti-fall linear 5s infinite;
+}
+
+@keyframes confetti-fall {
+    0% {
+        transform: translateY(-100%) rotate(0);
+    }
+
+    100% {
+        transform: translateY(100vh) rotate(180deg);
+    }
+}
