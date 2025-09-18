@@ -4,6 +4,7 @@ import {
   Route,
 } from "react-router-dom"
 
+import './styles.css'
 import Home from "./routes/Home"
 import Detail from "./routes/Detail"
 
