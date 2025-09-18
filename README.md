@@ -5,13 +5,11 @@
 * can add, delete, and complete todos
 * a confetti effect when you complete your todo!
 
-## Movie Viewing App!
+## Movie Viewing App 🎬
 * try at this <a href="https://movie-react-hseon.vercel.app/">link</a>
 * also built while taking Nomadcoder's basic react course
 
-<detail>
 ## Super-converter ⚡️
 * try at this <a href="https://super-converter-react.vercel.app/">link</a>
 * built while taking NomadCoder's basic react course
 * doesn't do much but the style looks cool
-</detail>
