@@ -10,7 +10,7 @@
 * also built while taking Nomadcoder's basic react course
 
 ## Online photo exhibition
-My nost aesthetic html yet, view at the following link : <a href="https://hseon-summer-exhibition.vercel.app/">Exhibition link</a>
+My most aesthetic html yet, view at the following link : <a href="https://hseon-summer-exhibition.vercel.app/">Exhibition link</a>
 
 ## Super-converter ⚡️
 * try at this <a href="https://super-converter-react.vercel.app/">link</a>
