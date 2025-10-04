@@ -3,7 +3,7 @@ import { useSearchParams } from 'react-router-dom';
 import Pagination from '../components/Pagination';
 import Recipe from '../components/Recipe';
 
-import styles from '../styles/home.module.css';
+import styles from '../styles/Home.module.css';
 
 export interface RecipeProps {
   id: number;
