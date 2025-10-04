@@ -9,6 +9,9 @@
 * try at this <a href="https://movie-react-hseon.vercel.app/">link</a>
 * also built while taking Nomadcoder's basic react course
 
+## Online photo exhibition
+My most aesthetic html yet, view at the following link : <a href="https://hseon-summer-exhibition.vercel.app/">Exhibition link</a>
+
 ## Super-converter ⚡️
 * try at this <a href="https://super-converter-react.vercel.app/">link</a>
 * built while taking NomadCoder's basic react course
