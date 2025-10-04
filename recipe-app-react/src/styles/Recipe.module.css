@@ -1,0 +1,61 @@
+.recipeCard {
+    background: white;
+    border: 0;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+
+    /* padding: 10px; */
+    cursor:pointer;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 16px;
+}
+
+.recipeDifficulty {
+    color: #007AFF;
+    font-size: 16px;
+}
+
+.recipeImg {
+    width: 100%;
+    border-radius: 14px 14px 0 0;
+    object-fit: cover;
+}
+
+.recipeTitle {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+
+
+ul.chips {
+  list-style: none;
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  padding: 0px 16px 16px 16px;
+  margin: 0px;
+}
+
+.chip{
+    background-color: rgb(234, 234, 234);
+  margin-right: 6px;
+  font-size: 12px;
+  float:left;
+  border: 1px, solid, rgba(118, 118, 128, 0.12);
+  border-radius: 14px;
+  padding:4px 8px;
+}
+
+a {
+    text-decoration: none;
+    color:black;
+}

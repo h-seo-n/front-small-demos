@@ -1,0 +1,188 @@
+/* --- LOADING STYLES (Unchanged) --- */
+.loadingWrap {
+  min-height: 80vh;
+  display: grid;
+  place-items: center;
+  gap: 12px;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 3px solid rgba(0, 0, 0, 0.12);
+  border-top-color: #007aff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loadingText {
+  color: #666;
+  font-size: 14px;
+}
+
+/* --- REVISED PAGE STYLES --- */
+
+/* Overall container for the page */
+.container {
+  max-width: 900px; /* A slightly narrower container for better readability */
+  margin: 48px auto; /* More vertical margin for spacing from the header */
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px; /* Consistent vertical spacing between all major sections */
+}
+
+/* The main top section with two columns: image and info */
+.topSection {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; /* Allow wrapping on small screens */
+  gap: 40px; /* Space between image and info */
+}
+
+.imageContainer {
+  flex: 1; /* Take up 1 part of the available space */
+  min-width: 300px; /* Prevent it from getting too small */
+}
+
+.imageContainer img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3; /* Maintain a consistent shape like the image */
+  object-fit: cover;
+  border-radius: 16px;
+  background-color: #e0e0e0; /* Placeholder color */
+}
+
+/* The right column with all the text info */
+.infoContainer {
+  flex: 1.5; /* Take up 1.5 parts of space, giving it more room */
+  display: flex;
+  flex-direction: column;
+  gap: 24px; /* Consistent spacing between title, times, and tags */
+}
+
+/* Row for the title and difficulty */
+.titleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline; /* Aligns the bottom of the text for a clean look */
+  gap: 16px;
+}
+
+.recipeTitle {
+  font-size: 36px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.recipeDifficulty {
+  color: #007aff;
+  font-size: 18px;
+  font-weight: 600;
+  flex-shrink: 0; /* Prevents the text from wrapping */
+}
+
+/* Styling for the cooking times paragraph */
+.timeInfo {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+  border-left: 3px solid #007aff; /* Decorative accent */
+  padding-left: 16px;
+}
+.timeInfo strong {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+.timeInfo span {
+  color: #555;
+}
+
+/* Container for the tags */
+.chips {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+}
+
+.chip {
+  font-size: 14px;
+  background-color: #eef0f2;
+  border-radius: 16px;
+  padding: 6px 14px;
+  color: #555;
+  font-weight: 500;
+}
+
+/* Shaded container for the ingredients list */
+.ingredients {
+  background-color: #f7f7f7;
+  padding: 24px;
+  border-radius: 12px;
+}
+
+.ingredients h3,
+.recipeSection h3,
+.menuInfo h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.ingredients p {
+  margin: 0;
+  color: #333;
+  line-height: 1.7;
+}
+
+/* Section for the recipe instructions */
+.recipeSection ol {
+  margin: 0;
+  display: block !important;
+  padding-left: 2rem;
+  font-size: 16px;
+  color: #333;
+}
+
+.recipeSection li {
+    display: list-item;
+    float: none;
+    padding: 0;
+}
+
+.recipeSection li::marker {
+  font-weight: 700; /* Make the list numbers bold */
+}
+.recipeSection li:not(:last-child) {
+  margin-bottom: 12px; /* Space between instructions */
+}
+
+/* Section for the menu info */
+.menuInfo ul {
+    list-style:inside;
+  color: #333;
+  display: block !important;
+    padding-left: 1.25rem;
+
+}
+.menuInfo li {
+    float:none;
+
+  font-size: 16px;
+  display: list-item;
+}
