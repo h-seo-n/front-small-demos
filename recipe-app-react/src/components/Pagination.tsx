@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import styles from '../styles/pagination.module.css';
+import styles from '../styles/Pagination.module.css';
 
 interface Props {
   totalItems: number;
